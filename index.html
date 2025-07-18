@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Alberto Mateus Coelho - Currículo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts e Ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --main: #0056b3;
+      --bg: #f6f8fc;
+      --block: #fff;
+      --grey: #888;
+      --card-shadow: 0 4px 20px rgba(50,90,170,0.09);
+      --border: #e0e7ef;
+      --accent: #e8f1ff;
+    }
+    * {box-sizing: border-box;}
+    body {
+      background: var(--bg);
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #222;
+      font-size: 1.05rem;
+    }
+    .cv-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: var(--block);
+      border-radius: 18px;
+      box-shadow: var(--card-shadow);
+      padding: 0 0 36px 0;
+      overflow: hidden;
+    }
+    /* HEADER */
+    .cv-header {
+      background: linear-gradient(90deg, var(--main) 60%, #3bb0f4 100%);
+      color: #fff;
+      padding: 36px 38px 22px 38px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cv-header-main {
+      flex: 2;
+    }
+    .cv-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: .5px;
+      margin: 0 0 8px 0;
+      font-weight: 700;
+    }
+    .cv-header ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #e9f6ff;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px 32px;
+      font-size: 1.02rem;
+    }
+    .cv-header li i {
+      margin-right: 8px;
+      color: #ffe066;
+    }
+    .cv-header a {
+      color: #e9f6ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .cv-header a:hover {
+      color: #ffe066;
+      text-decoration: underline;
+    }
+    /* FOTO */
+    .cv-photo {
+      flex-shrink: 0;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 3px 16px #008;
+      object-fit: cover;
+    }
+    /* DADOS RÁPIDOS */
+    .cv-quick {
+      background: var(--accent);
+      padding: 16px 38px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 1rem;
+    }
+    .cv-quick span {
+      display: flex;
+      align-items: center;
+      color: var(--main);
+      font-weight: 500;
+      gap: 6px;
+    }
+    /* FORMAÇÃO ACADÊMICA */
+    .cv-edu-highlight {
+      background: linear-gradient(90deg, #e8f1ff 80%, #cfe6ff 100%);
+      padding: 26px 38px 24px 38px;
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cv-edu-icon {
+      font-size: 2.6rem;
+      color: var(--main);
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+    .cv-education {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .cv-edu-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--main);
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 5px;
+      letter-spacing: .2px;
+    }
+    .cv-education span {
+      font-size: 1.08rem;
+      color: #263248;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cv-education span i {
+      color: var(--main);
+      font-size: 1.1rem;
+    }
+    .cv-section {
+      margin: 0;
+      padding: 36px 38px 0 38px;
+    }
+    .cv-section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.16rem;
+      font-weight: 700;
+      color: var(--main);
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+      border-left: 5px solid var(--main);
+      padding-left: 12px;
+    }
+    .cv-profile {
+      font-size: 1.06rem;
+      margin-bottom: 32px;
+      line-height: 1.8;
+      color: #313949;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+    /* EXPERIÊNCIAS */
+    .cv-exp-list {
+      margin: 24px 0 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .cv-exp-card {
+      background: var(--accent);
+      border-radius: 10px;
+      padding: 20px 22px 16px 22px;
+      box-shadow: 0 2px 7px #d0e7fa50;
+      border-left: 5px solid var(--main);
+    }
+    .cv-exp-top {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .cv-exp-company {
+      font-weight: 700;
+      color: var(--main);
+      font-size: 1.07rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .cv-exp-period {
+      color: var(--grey);
+      font-size: 1.01rem;
+      font-weight: 500;
+      margin-left: 2px;
+    }
+    .cv-exp-title {
+      color: #174485;
+      font-weight: 600;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      font-size: 1rem;
+    }
+    .cv-exp-details {
+      color: #263248;
+      font-size: .99rem;
+      margin-left: 2px;
+    }
+    /* RESPONSIVO */
+    @media (max-width: 600px) {
+      .cv-container {margin: 12px 0;}
+      .cv-header, .cv-section, .cv-quick, .cv-edu-highlight {padding: 18px 6vw;}
+      .cv-header h1 {font-size: 1.3rem;}
+      .cv-section-title {font-size: 1.05rem;}
+      .cv-exp-card {padding: 14px 8px;}
+      .cv-header ul {gap: 12px 6vw;}
+      .cv-edu-icon {font-size: 1.7rem;}
+      .cv-edu-title {font-size: 1.03rem;}
+      .cv-education span {font-size: .98rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <!-- HEADER -->
+    <div class="cv-header">
+      <div class="cv-header-main">
+        <h1>Alberto Mateus Coelho</h1>
+        <ul>
+          <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5551983051002" target="_blank">(51) 98305-1002</a></li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:albertomateus.rs@gmail.com">albertomateus.rs@gmail.com</a></li>
+          <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/alberto-mateus-0524249a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+      <!-- Foto adicionada aqui -->
+      <img src="3x4.png" alt="Foto Alberto Mateus" class="cv-photo">
+    </div>
+    <!-- DADOS RÁPIDOS -->
+    <div class="cv-quick">
+      <span><i class="fa-solid fa-id-card"></i> CNH AB</span>
+      <span><i class="fa-solid fa-cake-candles"></i> 10/02/1980</span>
+      <span><i class="fas fa-map-marker-alt"></i> Porto Alegre/RS</span>
+    </div>
+    <!-- FORMAÇÃO ACADÊMICA EM DESTAQUE -->
+    <div class="cv-edu-highlight">
+      <span class="cv-edu-icon"><i class="fa-solid fa-user-graduate"></i></span>
+      <div class="cv-education">
+        <span class="cv-edu-title">Formação Acadêmica</span>
+        <span><i class="fas fa-graduation-cap"></i> Bacharel em Administração de Empresas</span>
+        <span><i class="fas fa-certificate"></i> Tecnólogo em Processos Gerenciais</span>
+      </div>
+    </div>
+    <!-- PERFIL -->
+    <div class="cv-section">
+      <div class="cv-section-title">Resumo Profissional</div>
+      <div class="cv-profile">
+        Profissional com ampla experiência em gestão comercial e liderança de equipes no setor automotivo, atuando neste mercado desde 2007, entregando resultados consistentes em Vendas de Veículos e Pós-vendas em concessionárias de marcas renomadas, como FIAT, Honda e Hyundai. Expertise em gestão de pessoas e processos, com foco em atingimento de metas e resultados. Conhecimentos avançados em tecnologia da informação, com destaque para análise e organização de dados com foco estratégico e análise de desempenho.
+      </div>
+      <div class="cv-section-title">Experiências Profissionais</div>
+      <ul class="cv-exp-list">
+        <li class="cv-exp-card">
+          <div class="cv-exp-top">
+            <span class="cv-exp-company"><i class="fa-solid fa-building"></i> San Marino Fiat</span>
+          </div>
+          <div class="cv-exp-title">Gestão do departamento de Veículos Seminovos</div>
+          <div class="cv-exp-period">2024 – atual</div>
+          <div class="cv-exp-title">Gerente Geral de Pós-Vendas</div>
+          <div class="cv-exp-period">2020 – 2024</div>
+          <div class="cv-exp-title">Gerente Comercial – Filiais de Gravataí e Viamão</div>
+          <div class="cv-exp-period">2015 – 2016</div>
+          <div class="cv-exp-title">Gerente Comercial – Filial de Pelotas</div>
+          <div class="cv-exp-period">2012 – 2015</div>
+          <div class="cv-exp-title">Vendedor de Veículos – Filial de Pelotas</div>
+          <div class="cv-exp-period">2007 – 2009</div>
+        </li>
+        <li class="cv-exp-card">
+          <div class="cv-exp-top">
+            <span class="cv-exp-company"><i class="fa-solid fa-building"></i> Gala Hyundai</span>
+          </div>
+          <div class="cv-exp-title">Gerente de Vendas de Veículos Zero KM e Seminovos</div>
+          <div class="cv-exp-period">2018 – 2020</div>
+        </li>
+        <li class="cv-exp-card">
+          <div class="cv-exp-top">
+            <span class="cv-exp-company"><i class="fa-solid fa-building"></i> Via Porto Honda</span>
+          </div>
+          <div class="cv-exp-title">Gerente de Vendas de Veículos</div>
+          <div class="cv-exp-period">2017 – 2018</div>
+        </li>
+        <li class="cv-exp-card">
+          <div class="cv-exp-top">
+            <span class="cv-exp-company"><i class="fa-solid fa-building"></i> Eurovale Fiat – Grupo Betiolo</span>
+          </div>
+          <div class="cv-exp-title">Gerente Geral (todos os departamentos)</div>
+          <div class="cv-exp-period">2011 – 2012</div>
+          <div class="cv-exp-title">Gerente de Veículos Seminovos</div>
+          <div class="cv-exp-period">2010 – 2011</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
