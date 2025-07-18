@@ -23,7 +23,7 @@
       margin: 0;
       font-family: 'Inter', Arial, sans-serif;
       color: #222;
-      font-size: 1.05rem;
+      font-size: 0.98rem;
     }
     .cv-container {
       max-width: 800px;
@@ -49,7 +49,7 @@
     }
     .cv-header h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       letter-spacing: .5px;
       margin: 0 0 8px 0;
       font-weight: 700;
@@ -62,7 +62,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 22px 32px;
-      font-size: 1.02rem;
+      font-size: 1.00rem;
     }
     .cv-header li i {
       margin-right: 8px;
@@ -95,7 +95,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
-      font-size: 1rem;
+      font-size: 0.96rem;
     }
     .cv-quick span {
       display: flex;
@@ -114,26 +114,24 @@
       border-bottom: 1px solid var(--border);
     }
     .cv-edu-icon {
-      font-size: 2.6rem;
-      color: var(--main);
-      margin-top: 5px;
-      flex-shrink: 0;
+      display: none;
     }
     .cv-education {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
+      font-size: 0.96rem;
     }
     .cv-edu-title {
-      font-size: 1.2rem;
+      font-size: 1.12rem;
       font-weight: 700;
       color: var(--main);
       font-family: 'Montserrat', sans-serif;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
       letter-spacing: .2px;
     }
     .cv-education span {
-      font-size: 1.08rem;
+      font-size: 0.96rem;
       color: #263248;
       display: flex;
       align-items: center;
@@ -141,7 +139,7 @@
     }
     .cv-education span i {
       color: var(--main);
-      font-size: 1.1rem;
+      font-size: 1.06rem;
     }
     .cv-section {
       margin: 0;
@@ -149,7 +147,7 @@
     }
     .cv-section-title {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.16rem;
+      font-size: 1.10rem;
       font-weight: 700;
       color: var(--main);
       margin-bottom: 16px;
@@ -158,7 +156,7 @@
       padding-left: 12px;
     }
     .cv-profile {
-      font-size: 1.06rem;
+      font-size: 1.00rem;
       margin-bottom: 32px;
       line-height: 1.8;
       color: #313949;
@@ -172,12 +170,13 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 48px;
+      gap: 42px;
+      font-size: 0.96rem;
     }
     .cv-exp-card {
       background: var(--accent);
       border-radius: 10px;
-      padding: 20px 22px 16px 22px;
+      padding: 18px 20px 14px 20px;
       box-shadow: 0 2px 7px #d0e7fa50;
       border-left: 5px solid var(--main);
     }
@@ -191,12 +190,14 @@
     .cv-exp-company {
       font-weight: 700;
       color: var(--main);
-      font-size: 1.07rem;
+      font-size: 1.04rem;
       font-family: 'Montserrat', sans-serif;
+      margin-bottom: 9px;
+      display: inline-block;
     }
     .cv-exp-period {
       color: var(--grey);
-      font-size: 1.01rem;
+      font-size: 0.94rem;
       font-weight: 500;
       margin-left: 2px;
     }
@@ -205,24 +206,30 @@
       font-weight: 600;
       margin-bottom: 4px;
       margin-top: 4px;
-      font-size: 1rem;
+      font-size: 0.98rem;
     }
     .cv-exp-details {
       color: #263248;
-      font-size: .99rem;
+      font-size: .93rem;
       margin-left: 2px;
+    }
+    .cv-italico {
+      font-style: italic;
+      font-size: 0.87rem !important;
+      color: #2e4063;
+      vertical-align: middle;
     }
     /* RESPONSIVO */
     @media (max-width: 600px) {
       .cv-container {margin: 12px 0;}
       .cv-header, .cv-section, .cv-quick, .cv-edu-highlight {padding: 18px 6vw;}
       .cv-header h1 {font-size: 1.3rem;}
-      .cv-section-title {font-size: 1.05rem;}
-      .cv-exp-card {padding: 14px 8px;}
+      .cv-section-title {font-size: 1.02rem;}
+      .cv-exp-card {padding: 13px 6px;}
       .cv-header ul {gap: 12px 6vw;}
-      .cv-edu-icon {font-size: 1.7rem;}
-      .cv-edu-title {font-size: 1.03rem;}
-      .cv-education span {font-size: .98rem;}
+      .cv-edu-icon {font-size: 1.5rem;}
+      .cv-edu-title {font-size: 0.97rem;}
+      .cv-education span {font-size: .90rem;}
     }
   </style>
 </head>
@@ -249,11 +256,10 @@
     </div>
     <!-- FORMAÇÃO ACADÊMICA EM DESTAQUE -->
     <div class="cv-edu-highlight">
-      <span class="cv-edu-icon"><i class="fa-solid fa-user-graduate"></i></span>
       <div class="cv-education">
         <span class="cv-edu-title">Formação Acadêmica</span>
         <span><i class="fas fa-graduation-cap"></i> Bacharel em Administração de Empresas</span>
-        <span><i class="fas fa-certificate"></i> Tecnólogo em Processos Gerenciais</span>
+        <span><i class="fas fa-graduation-cap"></i> Tecnólogo em Processos Gerenciais</span>
       </div>
     </div>
     <!-- PERFIL -->
@@ -269,38 +275,38 @@
             <span class="cv-exp-company"><i class="fa-solid fa-building"></i> San Marino Fiat</span>
           </div>
           <div class="cv-exp-title">Gestão do departamento de Veículos Seminovos</div>
-          <div class="cv-exp-period">2024 – atual</div>
+          <div class="cv-exp-period">2024 até atual</div>
           <div class="cv-exp-title">Gerente Geral de Pós-Vendas</div>
-          <div class="cv-exp-period">2020 – 2024</div>
+          <div class="cv-exp-period">2020 até 2024</div>
           <div class="cv-exp-title">Gerente Comercial – Filiais de Gravataí e Viamão</div>
-          <div class="cv-exp-period">2015 – 2016</div>
+          <div class="cv-exp-period">2015 até 2016</div>
           <div class="cv-exp-title">Gerente Comercial – Filial de Pelotas</div>
-          <div class="cv-exp-period">2012 – 2015</div>
+          <div class="cv-exp-period">2012 até 2015</div>
           <div class="cv-exp-title">Vendedor de Veículos – Filial de Pelotas</div>
-          <div class="cv-exp-period">2007 – 2009</div>
+          <div class="cv-exp-period">2007 até 2009</div>
         </li>
         <li class="cv-exp-card">
           <div class="cv-exp-top">
             <span class="cv-exp-company"><i class="fa-solid fa-building"></i> Gala Hyundai</span>
           </div>
-          <div class="cv-exp-title">Gerente de Vendas de Veículos Zero KM e Seminovos</div>
-          <div class="cv-exp-period">2018 – 2020</div>
+          <div class="cv-exp-title">Gerente Comercial - Matriz em Pelotas</div>
+          <div class="cv-exp-period">2018 até 2020</div>
         </li>
         <li class="cv-exp-card">
           <div class="cv-exp-top">
             <span class="cv-exp-company"><i class="fa-solid fa-building"></i> Via Porto Honda</span>
           </div>
-          <div class="cv-exp-title">Gerente de Vendas de Veículos Zero KM e Seminovos</div>
-          <div class="cv-exp-period">2017 – 2018</div>
+          <div class="cv-exp-title">Gerente Comercial - Filial de Pelotas</div>
+          <div class="cv-exp-period">2017 até 2018</div>
         </li>
         <li class="cv-exp-card">
           <div class="cv-exp-top">
             <span class="cv-exp-company"><i class="fa-solid fa-building"></i> Eurovale Fiat – Grupo Betiolo</span>
           </div>
-          <div class="cv-exp-title">Gerente Geral (atuando em todos os departamentos)</div>
-          <div class="cv-exp-period">2011 – 2012</div>
+          <div class="cv-exp-title">Gerente Geral <span class="cv-italico">(atuando em todos os departamentos)</span></div>
+          <div class="cv-exp-period">2011 até 2012</div>
           <div class="cv-exp-title">Gerente de Veículos Seminovos</div>
-          <div class="cv-exp-period">2010 – 2011</div>
+          <div class="cv-exp-period">2010 até 2011</div>
         </li>
       </ul>
     </div>
